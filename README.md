@@ -12,5 +12,5 @@ This CHI subclass stores and retrieves a HTTP::Responses data, with the HTTP::Re
     my $agent = LWP::UserAgent->new;
     
     my $rqst = GET('http://...');
-    my $resp = $cache->compute( $rqst, $options, sub { $agent->request($_) } );
+    my $resp = $cache->compute( $rqst, $options, sub { $agent->request($rqst) } );
 
